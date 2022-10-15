@@ -5,7 +5,7 @@
 exit
 )
 @set "regex='</UserDefinedCommands>'"
-@set "newname=<Command name=\"run\" Ctrl=\"no\" Alt=\"no\" Shift=\"no\" Key=\"120\">&quot;C:\Users\qwert\Desktop\run.bat&quot; &quot;$(FULL_CURRENT_PATH)&quot;</Command></UserDefinedCommands>"
+@set "newname=<Command name=\"run\" Ctrl=\"no\" Alt=\"no\" Shift=\"no\" Key=\"120\">&quot;run.bat&quot; &quot;$(FULL_CURRENT_PATH)&quot;</Command></UserDefinedCommands>"
 powershell "%file%|%%{(cat $_) -replace %regex%,'%newname%' |out-file $_ -Enc default}"
 @pause
 @exit /B 1
